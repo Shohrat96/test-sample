@@ -33,8 +33,8 @@ const Home: NextPage = () => {
       }
     }
     fetchData()
-    // const fetchInterval = setInterval(fetchData, 5000);
-    // return () => clearInterval(fetchInterval);
+    const fetchInterval = setInterval(fetchData, 5000);
+    return () => clearInterval(fetchInterval);
   }, [dispatch])
 
   if (error) return <div className={styles.generalWrapper}>Error happened: {error}</div>
